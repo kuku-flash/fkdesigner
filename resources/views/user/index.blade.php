@@ -56,7 +56,7 @@
                   <div class="col-auto">
                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{\App\Models\Order::countActiveOrder()}}</div>
                   </div>
-                  
+
                 </div>
               </div>
               <div class="col-auto">
@@ -93,7 +93,7 @@
       @endphp
       <!-- Order -->
       <div class="col-xl-12 col-lg-12">
-        <table class="table table-bordered table-hover" id="order-dataTable" width="100%" cellspacing="0">
+        <table class="table table-stripe table-hover table-responsive" id="order-dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
               <th>#</th>
@@ -106,13 +106,13 @@
               <th>Action</th>
             </tr>
           </thead>
-          
+
           <tbody>
           @php
             $counter = 1;
         @endphp
             @if(count($orders)>0)
-              @foreach($orders as $order)   
+              @foreach($orders as $order)
                 <tr>
                     <td>{{$counter}}</td>
                     <td>{{$order->order_number}}</td>
@@ -134,7 +134,7 @@
                     <td>
                         <a href="{{route('user.order.show',$order->id)}}" class="btn btn-warning btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="view" data-placement="bottom"><i class="fas fa-eye"></i></a>
                         <form method="POST" action="{{route('user.order.delete',[$order->id])}}">
-                          @csrf 
+                          @csrf
                           @method('delete')
                               <button class="btn btn-danger btn-sm dltBtn" data-id={{$order->id}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fas fa-trash-alt"></i></button>
                         </form>

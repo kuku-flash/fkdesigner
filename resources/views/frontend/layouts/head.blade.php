@@ -1,6 +1,13 @@
 <!-- Meta Tag -->
 @yield('meta')
 <!-- Title Tag  -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='copyright' content=''>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="online shop, purchase, cart, ecommerce site, best online shopping">
 <title>@yield('title')</title>
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="images/favicon.png">
